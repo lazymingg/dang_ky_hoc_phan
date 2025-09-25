@@ -233,7 +233,7 @@ def auto_dang_ky_hoc_phan(username, password, danh_sach_mon_hoc):
                     break
                 
                 #random delay 1-10 giây
-                delay = random.randint(1, 3)
+                delay = random.randint(1, 2)
                 print(f"⏳ Chờ {delay}s trước request tiếp theo...")
                 time.sleep(delay)
                 
@@ -250,8 +250,9 @@ def auto_dang_ky_hoc_phan(username, password, danh_sach_mon_hoc):
         
 #config
 USERNAME = "23127423"
-PASSWORD = "sorry bro i can't share :D"
-DANH_SACH_MON_HOC = ["5902", "5903", "5904"]
+PASSWORD = "sory "
+DANH_SACH_MON_HOC = ["5902"]
+DANH_SACH_MON_HOC = {}
 
 if __name__ == "__main__":
     try:
