@@ -163,9 +163,9 @@ def dang_ky_mon_hoc(session, ma_lop_hp):
             status = json_response.get("Status", "")
             message = json_response.get("Message", "")
             
-            if status == "SUCCESS":
+            if status == "Success":
                 print(f"Lụm được một môn {message}")
-                return "SUCCESS"
+                return "Success"
             elif status == "FAILED":
                 print(f"Đăng ký thất bại: {message}")
                 return "FAILED"
@@ -224,7 +224,7 @@ def auto_dang_ky_hoc_phan(username, password, danh_sach_mon_hoc):
             try:
                 result = dang_ky_mon_hoc(session, ma_mon)
                 
-                if result == "SUCCESS":
+                if result == "Success":
                     print(f"🎊 Môn {ma_mon} đã đăng ký thành công! Loại bỏ khỏi danh sách.")
                     danh_sach_mon_hoc.remove(ma_mon)
                 elif result == "NEED_RELOGIN":
@@ -233,7 +233,7 @@ def auto_dang_ky_hoc_phan(username, password, danh_sach_mon_hoc):
                     break
                 
                 #random delay 1-10 giây
-                delay = random.randint(1, 10)
+                delay = random.randint(1, 3)
                 print(f"⏳ Chờ {delay}s trước request tiếp theo...")
                 time.sleep(delay)
                 
@@ -250,7 +250,7 @@ def auto_dang_ky_hoc_phan(username, password, danh_sach_mon_hoc):
         
 #config
 USERNAME = "23127423"
-PASSWORD = "=)) deo co dau "
+PASSWORD = "sorry bro i can't share :D"
 DANH_SACH_MON_HOC = ["5902", "5903", "5904"]
 
 if __name__ == "__main__":
