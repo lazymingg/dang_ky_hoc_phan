@@ -232,8 +232,8 @@ def auto_dang_ky_hoc_phan(username, password, danh_sach_mon_hoc):
                     session = None  # Force login lại
                     break
                 
-                #random delay 1-10 giây
-                delay = random.randint(1, 2)
+                # delay 1s mỗi lần request
+                delay = 1
                 print(f"⏳ Chờ {delay}s trước request tiếp theo...")
                 time.sleep(delay)
                 
@@ -248,11 +248,12 @@ def auto_dang_ky_hoc_phan(username, password, danh_sach_mon_hoc):
         
         # Chờ một chút trước khi lặp lại toàn bộ quá trình
         
-#config
+# thông tin tài khoản
 USERNAME = "23127423"
 PASSWORD = "sory "
+# thêm mã môn học vào đây
 DANH_SACH_MON_HOC = ["5902"]
-DANH_SACH_MON_HOC = {}
+# DANH_SACH_MON_HOC = {}
 
 if __name__ == "__main__":
     try:
